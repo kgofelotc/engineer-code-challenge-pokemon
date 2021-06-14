@@ -1,0 +1,30 @@
+<h1>Details Info</h1>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Name: {{ pokemonDtl.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="sprites.back_default" alt="{{ sprites.back_default }}" class="img-responsive"
+      style="max-height: 300px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let stat of pokemonDtl.stats">
+        <p>base_stat : {{ stat.base_stat }}</p>
+        <p>effort : {{ stat.effort }}</p>
+        <p>stat : {{ stat.stat.name }}</p>
+
+        <a style="cursor: pointer;" routerLinkActive="active" class="list-group-item clearfix">
+          <div class="pull-left">
+            <p class="list-group-item-text">{{ stat.stat.url }}</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

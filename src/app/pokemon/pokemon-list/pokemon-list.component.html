@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12">
+      <h1>List of Pokemon</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-pokemon-item
+        *ngFor="let resultsEl of results; let i = index"
+        [result]="resultsEl"
+        [index]="i"></app-pokemon-item>
+    </div>
+  </div>
+  
